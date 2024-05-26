@@ -1,4 +1,4 @@
-package com.lancamentos.api.lancamento;
+package com.lancamentos.api.domain.lancamento;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

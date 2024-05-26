@@ -1,7 +1,7 @@
-package com.lancamentos.api.lancamento;
+package com.lancamentos.api.domain.lancamento;
 
-import com.lancamentos.api.categoria.Categoria;
-import com.lancamentos.api.pessoa.Pessoa;
+import com.lancamentos.api.domain.categoria.Categoria;
+import com.lancamentos.api.domain.pessoa.Pessoa;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -46,19 +46,45 @@ public class Lancamento {
     @JoinColumn(name = "codigo_pessoa")
     private Pessoa pessoa;
 
-    public Lancamento(DadosCadastroLancamento dados) {
-
-    }
-
-    public void atualizarInformacoes(DadosAtualizacaoLancamento dados) {
+    public Lancamento(DadosCadastroLancamento dados, Categoria categoria, Pessoa pessoa) {
         this.descricao = dados.descricao();
         this.dataVencimento = dados.dataVencimento();
         this.dataPagamento = dados.dataPagamento();
         this.valor = dados.valor();
         this.observacao = dados.observacao();
         this.tipo = dados.tipo();
-        this.categoria = new Categoria();
-        this.pessoa = new Pessoa();
+        this.categoria = categoria;
+        this.pessoa = pessoa;
+
+
+    }
+
+    public void atualizarInformacoes(DadosAtualizacaoLancamento dados) {
+        if (dados.descricao() != null){
+            this.descricao = dados.descricao();
+        }
+        if (dados.dataVencimento() != null){
+            this.dataVencimento = dados.dataVencimento();
+        }
+        if (dados.dataPagamento() != null){
+            this.dataPagamento = dados.dataPagamento();
+        }
+        if (dados.valor() != null){
+            this.valor = dados.valor();
+        }
+        if (dados.observacao() != null){
+            this.observacao = dados.observacao();
+        }
+        if (dados.dataVencimento() != null){
+            this.tipo = dados.tipo();
+        }
+        if (categoria != null){
+            this.categoria = categoria;
+        }
+        if (pessoa != null){
+            this.pessoa = pessoa;
+        }
+
     }
 
 }

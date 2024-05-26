@@ -1,8 +1,11 @@
-package com.lancamentos.api.lancamento;
+package com.lancamentos.api.domain.lancamento;
+import jakarta.validation.constraints.NotNull;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public record DadosAtualizacaoLancamento(
+        @NotNull
         Long codigo,
         String descricao,
         LocalDate dataVencimento,
@@ -11,5 +14,4 @@ public record DadosAtualizacaoLancamento(
         String observacao,
         TipoLancamento tipo,
         Long categoriaId,
-        Long pessoaId
-) {}
+        Long pessoaId) {}

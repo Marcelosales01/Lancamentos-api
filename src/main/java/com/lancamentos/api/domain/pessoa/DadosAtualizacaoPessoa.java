@@ -1,6 +1,6 @@
-package com.lancamentos.api.pessoa;
+package com.lancamentos.api.domain.pessoa;
 
-import com.lancamentos.api.endereco.DadosEndereco;
+import com.lancamentos.api.domain.endereco.DadosEndereco;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosAtualizacaoPessoa(

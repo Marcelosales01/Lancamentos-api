@@ -1,6 +1,4 @@
-package com.lancamentos.api.lancamento;
-import com.lancamentos.api.categoria.DadosCadastroCategoria;
-import com.lancamentos.api.pessoa.DadosCadastroPessoa;
+package com.lancamentos.api.domain.lancamento;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -24,17 +22,11 @@ public record DadosCadastroLancamento(
         @Valid
         TipoLancamento tipo,
 
-        @NotBlank
-        String categoria,
-        @NotBlank
-        String pessoa,
+        @NotNull
+        Long codigo_categoria,
 
         @NotNull
-        Long categoriaCodigo,
-
-        @NotNull
-        Long pessoaCodigo
-) {
+        Long codigo_pessoa) {
 
 
 }

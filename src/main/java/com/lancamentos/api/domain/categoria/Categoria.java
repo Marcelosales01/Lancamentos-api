@@ -1,7 +1,6 @@
-package com.lancamentos.api.categoria;
+package com.lancamentos.api.domain.categoria;
 
 
-import com.lancamentos.api.endereco.Endereco;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -20,7 +19,6 @@ public class Categoria {
     private Long codigo;
     private String nome;
 
-
     public Categoria(DadosCadastroCategoria dados) {
         this.nome = dados.nome();
     }
@@ -31,5 +29,4 @@ public class Categoria {
             this.nome = dados.nome();
         }
     }
-
 }

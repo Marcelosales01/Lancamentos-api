@@ -1,4 +1,4 @@
-package com.lancamentos.api.endereco;
+package com.lancamentos.api.domain.endereco;
 
 
 import jakarta.persistence.Embeddable;

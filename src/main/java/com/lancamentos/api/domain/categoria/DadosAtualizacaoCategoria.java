@@ -1,6 +1,5 @@
-package com.lancamentos.api.categoria;
+package com.lancamentos.api.domain.categoria;
 
-import com.lancamentos.api.endereco.DadosEndereco;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 

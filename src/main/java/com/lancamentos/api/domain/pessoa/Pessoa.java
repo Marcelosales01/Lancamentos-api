@@ -1,6 +1,6 @@
-package com.lancamentos.api.pessoa;
+package com.lancamentos.api.domain.pessoa;
 
-import com.lancamentos.api.endereco.Endereco;
+import com.lancamentos.api.domain.endereco.Endereco;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

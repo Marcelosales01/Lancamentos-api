@@ -1,4 +1,4 @@
-package com.lancamentos.api.pessoa;
+package com.lancamentos.api.domain.pessoa;
 
 public record DadosListagemPessoa(
         Long codigo,

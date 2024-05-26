@@ -1,4 +1,4 @@
-package com.lancamentos.api.pessoa;
+package com.lancamentos.api.domain.pessoa;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

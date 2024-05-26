@@ -1,4 +1,4 @@
-package com.lancamentos.api.categoria;
+package com.lancamentos.api.domain.categoria;
 
 public record DadosDetalhamentoCategoria(
         Long codigo,
